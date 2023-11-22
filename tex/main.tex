@@ -1,0 +1,176 @@
+\input{preamble}
+\begin{document}
+\begin{center}
+{\large
+Федеральное государственное автономное образовательное учреждение\\
+высшего образования\\
+«Национальный исследовательский университет ИТМО»\\
+\vspace{5pt}
+Факультет программной инженерии и компьютерной техники\\
+}
+\vspace{17em}
+{\Large Практическая работа №5} \Large по дисциплине\\
+\smallskip
+{\LARGE \textbf{Теория вероятностей и
+математическая статистика}}\\[1em]
+{\large Вариант №9}
+\end{center}
+\vspace{20em}
+{\large
+\begin{flushright}
+Выполнил: Минкова Алина Андреевна\\
+Группа: P3214\\
+Преподаватель: Селина Елена Георгиевна\\
+\end{flushright}
+\vspace{\fill}
+\begin{center}
+Санкт-Петербург
+2023г.
+\end{center}
+}\newpage
+\smallskip
+\phantom{ }\\
+\textbf{\LARGE Задание}
+
+\smallskip
+\parindent=0mmКаждый студент получает выборку из 20 чисел. Необходимо определить следующие статистические характеристики: вариационный ряд, экстремальные значения и размах, оценки математического ожидания и среднеквадратического отклонения, эмпирическую функцию распределения и её график, гистограмму и полигон приведенных частот группированной выборки. Для расчета характеристик и построения графиков нужно написать программу на одном из языков программирования. Листинг программы и результаты работы должны быть представлены в отчете по практической работе\\
+\phantom{ }\\
+\textbf{\large Вариант №9}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -1.35} & {\large 0.38} & {\large 0.35} & {\large 0.8} & {\large -1.49} & {\large -0.36} & {\large -0.8} & {\large 0.55} & {\large -0.46} & {\large -0.6} & {\large -0.42} & {\large 1.21} & {\large 1.56} & {\large 0.14} & {\large 0.35} & {\large -1.57} & {\large -0.15} & {\large 0.2} & {\large -1.63} & {\large 0.05}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{ }\\
+\phantom{ }\\
+\textbf{\LARGE Выполнение}
+
+\smallskip
+\phantom{ }\\
+\textbf{\large Вариационный ряд}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -1.63} & {\large -1.57} & {\large -1.49} & {\large -1.35} & {\large -0.8} & {\large -0.6} & {\large -0.46} & {\large -0.42} & {\large -0.36} & {\large -0.15} & {\large 0.05} & {\large 0.14} & {\large 0.2} & {\large 0.35} & {\large 0.35} & {\large 0.38} & {\large 0.55} & {\large 0.8} & {\large 1.21} & {\large 1.56}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{ }\\
+\textbf{\large Статистический ряд}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -1.63} & {\large -1.57} & {\large -1.49} & {\large -1.35} & {\large -0.8} & {\large -0.6} & {\large -0.46} & {\large -0.42} & {\large -0.36} & {\large -0.15} & {\large 0.05} & {\large 0.14} & {\large 0.2} & {\large 0.35} & {\large 0.38} & {\large 0.55} & {\large 0.8} & {\large 1.21} & {\large 1.56}\\
+\hline
+{\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 2} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{ }\\
+\textbf{\large Экстремальные значения}
+
+\smallskip
+\parindent=0mmМинимальное значение: $x_{0}$ = -1.63; Максимальное значение: $x_{20}$ = 1.56\\
+\phantom{ }\\
+\textbf{\large Размах}
+
+\smallskip
+\parindent=0mmРазмах = наибольшее значение - наименьшее значение = $x_{20}$ - $x_{0}$; Размах = 3.19\\
+\phantom{ }\\
+\textbf{\large Математическое ожидание}
+
+\smallskip
+\parindent=0mmДля данной выборки статистический ряд будет совпадать с вариационным, так как каждое значение встречается только раз\\
+\phantom{ }\\
+\parindent=0mmВыборочное среднее (выборочное математическое ожидание) - среднее арифметическое всех значений выборки, считается по формуле: $$\overline{x_B} = \frac{1}{n} \sum_{i=1}^k x_i\cdot n_i$$\\
+\phantom{ }\\
+\parindent=0mmДля исходной выборки $$\overline{x_B} = -0.16199999999999998$$\\
+\phantom{ }\\
+\textbf{\large Выбороная дисперсия}
+
+\smallskip
+\parindent=0mm Выбороная дисперсия $D_B$ - среднее арифметическое квадратов отклонений значений выборки от выборочной средней $\overline{x_B}$, считается по формуле: $$D_B = \frac{1}{n} \sum_{i=1}^k (x_i - \overline{x_B})^2 \cdot n_i$$\\
+\phantom{ }\\
+\newpage
+\parindent=0mmДля исходной выборки $$D_B = -0.16199999999999998$$\\
+\phantom{ }\\
+\textbf{\large Среднеквадратическое отклонение}
+
+\smallskip
+\parindent=0mm Выборочное среднее квадратическое отклонение выборки определяется формулой $$\sigma_B = \sqrt{D_B}$$\\
+\phantom{ }\\
+\parindent=0mmДля исходной выборки $$\sigma_B = 0.879526$$\\
+\phantom{ }\\
+\textbf{\large Исправленное выборочное среднее квадратическое отклонение}
+
+\smallskip
+\parindent=0mm При решении практических используется величина $$S^2 = \frac{n}{n - 1} \sum_{i=1}^k (x_i - \overline{x_B})^2 \cdot n_i = \frac{n}{n - 1}D_B$$ Которая называется \textit{исправленной выборочной дисперсией}\\
+\phantom{ }\\
+\parindent=0mm Величина $S = \sqrt{S^2}$ называется исправленным выборочным средним квадратическим отклонением\\
+\phantom{ }\\
+\parindent=0mmДля исходной выборки $$S = 0.902375$$\\
+\phantom{ }\\
+\textbf{\large Эмпирическая функция распределения}
+
+\smallskip
+\parindent=0mm Эмпирической (статистической) функцией распределения называется функция $F_n^x(x)$, определяющая для каждого значения $x$ частность события $\{X < x\}$: $$F_n^*(x) = p^*\{X < x\}$$\\
+\phantom{ }\\
+\parindent=0mmГде $p^x = \frac{{n_x}}{{n}}$ - отношение количесвта вариантов \{X < x\} к общему числу вариантов\\
+\phantom{ }\\
+Для исходной выборки $$F_n^*(x) = \begin{cases}
+0 & \text{при } x < -1.63\\
+0.05 & \text{при } -1.63\leq x < -1.57\\
+0.1 & \text{при } -1.57\leq x < -1.49\\
+0.15 & \text{при } -1.49\leq x < -1.35\\
+0.2 & \text{при } -1.35\leq x < -0.8\\
+0.25 & \text{при } -0.8\leq x < -0.6\\
+0.3 & \text{при } -0.6\leq x < -0.46\\
+0.35 & \text{при } -0.46\leq x < -0.42\\
+0.4 & \text{при } -0.42\leq x < -0.36\\
+0.45 & \text{при } -0.36\leq x < -0.15\\
+0.5 & \text{при } -0.15\leq x < 0.05\\
+0.55 & \text{при } 0.05\leq x < 0.14\\
+0.6 & \text{при } 0.14\leq x < 0.2\\
+0.65 & \text{при } 0.2\leq x < 0.35\\
+0.7 & \text{при } 0.35\leq x < 0.35\\
+0.75 & \text{при } 0.35\leq x < 0.38\\
+0.8 & \text{при } 0.38\leq x < 0.55\\
+0.85 & \text{при } 0.55\leq x < 0.8\\
+0.9 & \text{при } 0.8\leq x < 1.21\\
+0.95 & \text{при } 1.21\leq x < 1.56\\
+1 & \text{при } x \geq 1.56
+\end{cases}$$
+\phantom{ }\\
+\begin {figure}[h]\centering\includegraphics[width=0.8\textwidth]{empirical_graph.png}\caption{График эмпирической функции распределения}\label{fig:my_label}\end{figure}
+\newpage
+\textbf{\large Интервальный статистический ряд}
+
+\smallskip
+\parindent=0mmТак как признак является непрерывным, то имеет смысл составить интервальный статический ряд (для дальнейшего использования в функции распределения). Пользуясь формулой Стерджеса, найдем величину интервала $$h = \frac{{x_{{max}} - x_{{min}}}}{{1 + log_2 n}}$$\\
+\phantom{ }\\
+\parindent=0mmДля исходной выборки $$h = 0.599407$$Учитывая рекомендацию по выбору начала первого интервала $x_{нач} = x_{min} - \frac{h}{2}$\\
+\phantom{ }\\
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+{\large [-1.9297;-1.3303)} & {\large [-1.3303;-0.7309)} & {\large [-0.7309;-0.1315)} & {\large [-0.1315;0.4679)} & {\large [0.4679;1.0673)} & {\large [1.0673;1.6667)}\\
+\hline
+{\large 4} & {\large 1} & {\large 5} & {\large 6} & {\large 2} & {\large 2}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{ }\\
+\begin {figure}[h]\centering\includegraphics[width=0.8\textwidth]{bar_char.png}\caption{Гистограмма}\label{fig:my_label}\end{figure}
+\parindent=0mm\newpage
+ \phantom{ }\\\
+\phantom{ }\\
+\begin {figure}[t]\centering\includegraphics[width=0.8\textwidth]{frequency_polygon.png}\caption{Полигон приведенных частот группированной выборки}\label{fig:my_label}\end{figure}
+\end{document}
